@@ -75,6 +75,10 @@ const i18Obj = {
         'objective': 'About Me',
         'hero-title': 'Vladimir Makarov',
         'phone-tooltip': 'Phone',
+        'email-tooltip': 'Email',
+        'skype-tooltip': 'Skype',
+        'telegram-tooltip': 'Telegram',
+        'github-tooltip': 'GitHub',
         'sample_code': 'Sample code',
         'purposes': 'Purposes',
         'sample_code-text': 'Your coworker was supposed to write a simple helper function to capitalize a string (that contains a single word) before they went on vacation. Unfortunately, they have now left and the code they gave you doesn\'t work. Fix the helper function they wrote so that it works as intended (i.e. make the first character in the string "word" upper case). Don\'t worry about numbers, special characters, or non-string types being passed to the function. The string lengths will be from 1 character up to 10 characters, but will never be empty.',
@@ -115,6 +119,10 @@ const i18Obj = {
         'about_me': 'Обо мне',
         'hero-title': 'Владимир Макаров',
         'phone-tooltip': 'Телефон',
+        'email-tooltip': 'Почта',
+        'skype-tooltip': 'Скайп',
+        'telegram-tooltip': 'Телеграм',
+        'github-tooltip': 'ХитХаб',
         'sample_code': 'Пример кода',
         'purposes': 'Цель',
         'sample_code-text': 'Ваш коллега должен был написать простую вспомогательную функцию для преобразования строки (содержащей одно слово) в заглавные буквы перед отпуском. К сожалению, он уже ушел, и предоставленный им код не работает. Исправьте написанную им вспомогательную функцию так, чтобы она работала, как задумано (то есть сделайте первый символ строки "слово" заглавным). Не беспокойтесь о числах, специальных символах или передаче в функцию не-строковых типов данных. Длина строк будет от 1 символа до 10 символов, но никогда не будет пустой.',
@@ -170,6 +178,7 @@ function getTranslateRu() {
         el.firstChild.data = text;
     });
     window.localStorage.setItem('ru-lang', true);
+    updateTooltipText();
 }
 
 function getTranslateEn() {
@@ -183,13 +192,15 @@ function getTranslateEn() {
         el.firstChild.data = text;
     });
     window.localStorage.setItem('ru-lang', false);
+    updateTooltipText();
 }
 
 russian.addEventListener('click', getTranslateRu);
 english.addEventListener('click', getTranslateEn);
 
 // Получение текущего языка страницы
-let currentLanguage = document.documentElement.lang;
+// let currentLanguage = document.documentElement.lang;
+let currentLanguage = window.localStorage.getItem('ru-lang') === 'true' ? 'ru' : 'en';
 
 // Функция для скачивания файла в зависимости от выбранного языка
 function downloadFile(event, fileName) {
@@ -254,11 +265,8 @@ updateTooltipText();
 // popup
 
 <!-- Кнопка для открытия popup -->
-
-
-<!-- Popup -->
 const popupTriggers = document.querySelectorAll('.popup-trigger');
-const popup = document.querySelector('.popup');
+const popups = document.querySelectorAll('.popup');
 const closeButtons = document.querySelectorAll('.close-popup');
 const overlay = document.querySelector('.overlay');
 
@@ -266,35 +274,45 @@ popupTriggers.forEach(trigger => {
     trigger.addEventListener('click', () => {
         const popupId = trigger.getAttribute('data-popup-id');
         const popup = document.getElementById(popupId);
-if(popup){
-    openPopup();
-    popup.style.display = 'block';
-    overlay.style.display = 'block';
-}
-
+        if (popup) {
+            openPopup(popup, overlay);
+        }
     });
 });
 
 closeButtons.forEach((button) => {
     button.addEventListener('click', () => {
         const popup = button.parentNode;
-        const overlay = popup.nextElementSibling;
         closePopup(popup, overlay);
     });
 });
 
 overlay.addEventListener('click', () => {
-    closePopup();
+    closeAllPopups(overlay);
 });
 
-function openPopup() {
+function openPopup(popup, overlay) {
     popup.style.display = 'block';
     overlay.style.display = 'block';
     document.body.classList.add('popup-open');
+
+    popup.style.opacity = '0';
+    setTimeout(function() {
+        popup.style.opacity = '1';
+    }, 200);
 }
 
-function closePopup() {
+
+function closePopup(popup, overlay) {
     popup.style.display = 'none';
+    overlay.style.display = 'none';
+    document.body.classList.remove('popup-open');
+}
+
+function closeAllPopups(overlay) {
+    popups.forEach(popup => {
+        popup.style.display = 'none';
+    });
     overlay.style.display = 'none';
     document.body.classList.remove('popup-open');
 }

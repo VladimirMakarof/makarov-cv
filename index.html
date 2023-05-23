@@ -47,10 +47,7 @@
               <li>
                 <a href="#english" target="_self" class="header-link" data-i18="English">English</a>
               </li>
-              <li>
-                <a href="#sample" target="_self" class="header-link" data-i18="sample_code">Sample
-                  code</a>
-              </li>
+
             </ul>
 
           </nav>
@@ -78,27 +75,31 @@
           <h2 data-i18="my_contacts">My contacts</h2>
           <ul class="contacts-list">
             <li>
-              <a href="tel:+79117925259" class="svg-link" data-tooltip-key="phone-tooltip"><svg class="icon">
+              <a href="tel:+79117925259" class="svg-link" data-tooltip-key="phone-tooltip">
+                <svg class="icon">
                   <use xlink:href="logo/sprite.svg#phone"></use>
-                </svg></a>
+                </svg>
+              </a>
             </li>
             <li>
-              <a href="mailto:Stan13.09@mail.ru"><svg class="icon">
+              <a href="mailto:Stan13.09@mail.ru" class="svg-link" data-tooltip-key="email-tooltip">
+                <svg class="icon">
                   <use xlink:href="logo/sprite.svg#email"></use>
-                </svg></a>
+                </svg>
+              </a>
             </li>
             <li>
-              <a href="skype:makarov03.07?userinfo"><svg class="icon">
+              <a href="skype:makarov03.07?userinfo" class="svg-link" data-tooltip-key="skype-tooltip"><svg class="icon">
                   <use xlink:href="logo/sprite.svg#skype_icon"></use>
                 </svg></a>
             </li>
             <li>
-              <a href="tg://resolve?domain=@Vladimir_Makarof"><svg class="icon">
+              <a href="tg://resolve?domain=@Vladimir_Makarof" class="svg-link" data-tooltip-key="telegram-tooltip"><svg class="icon">
                   <use xlink:href="logo/sprite.svg#telegram_iconsvg"></use>
                 </svg></a>
             </li>
             <li>
-              <a href="https://github.com/VladimirMakarof"><svg class="icon">
+              <a href="https://github.com/VladimirMakarof" class="svg-link" data-tooltip-key="github-tooltip"><svg class="icon">
                   <use xlink:href="logo/sprite.svg#github-logo"></use>
                 </svg></a>
             </li>
@@ -182,7 +183,7 @@
       </section>
 
       <section class=" section accordion-item highlight-section">
-        <h2 class="accordion-header">Skills
+        <h2 class="accordion-header" data-i18="skills">Skills
           <span class="accordion-arrow">
             <svg width="30" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 10">
               <path fill="#000000" d="M0,0L7.5,5L0,10L1.25,5L0,0Z" />
@@ -269,20 +270,21 @@
               <li>FreeCodeCamp / HTMLAcademy / Codecademy</li>
             </ul>
 
-            <div class="popup" data-popup-id="js-course-popup" id="js-course-popup">
+            <div class="popup" id="js-course-popup">
               <img src="../img/diploma/js02.png" alt="JavaScript2.0 - курс ItGid">
-              <span class="close-popup">Закрыть</span>
+              <span class="close-popup" data-popup-id="js-course-popup">Закрыть</span>
             </div>
 
-            <div class="popup" data-popup-id="php-course-popup" id="php-course-popup">
-              <img src="../img/diploma/php2.png" alt="PHP - stage 2 - курс ItGid">
-              <span class="close-popup">Закрыть</span>
-            </div>
-
-            <div class="popup" data-popup-id="js-function-course-popup" id="js-function-course-popup">
+            <div class="popup" id="js-function-course-popup">
               <img src="../img/diploma/jsfun.png" alt="JavaScript Function - курс ItGid">
-              <span class="close-popup">Закрыть</span>
+              <span class="close-popup" data-popup-id="js-function-course-popup">Закрыть</span>
             </div>
+
+            <div class="popup" id="php-course-popup">
+              <img src="../img/diploma/php2.png" alt="PHP - stage 2 - курс ItGid">
+              <span class="close-popup" data-popup-id="php-course-popup">Закрыть</span>
+            </div>
+
 
             <div class="overlay"></div>
           </div>
@@ -306,7 +308,7 @@
         </div>
 
       </section>
-      <section class="SampleCode section accordion-item" id="sample">
+      <section class="SampleCode section accordion-item">
         <h2 data-i18="sample_code" class="accordion-header">Sample code
           <span class="accordion-arrow">
             <svg width="30" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 10">
