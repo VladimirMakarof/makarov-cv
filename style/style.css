@@ -40,8 +40,6 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: baseline;
-
-  padding-bottom: 50px;
 }
 .main-container {
   max-width: 1024px;
@@ -56,7 +54,7 @@ body {
 
 .header-list li {
   list-style: none;
-  margin: 0px 0px 0px 20px;
+  margin: 0 0 0 20px;
 }
 
 .header-link {
@@ -83,8 +81,7 @@ body {
   background-position: center;
   background-size: cover;
   position: relative;
-  box-shadow: 0px 0px 45px -20px rgb(0 0 0 / 75%);
-  position: relative;
+  box-shadow: 0 0 45px -20px rgb(0 0 0 / 75%);
 }
 .my-name {
   position: absolute;
@@ -106,12 +103,10 @@ body {
   background-repeat: no-repeat;
   /* background-position: center center; */
   /* background-size: cover; */
-  box-shadow: 0px 0px 45px -20px rgb(0 0 0 / 75%);
+  box-shadow: 0 0 45px -20px rgb(0 0 0 / 75%);
   border: 5px solid #ffffff;
   border-radius: 50%;
-
   max-width: 100%;
-  border-radius: 50%;
 }
 .hero-text {
   position: absolute;
@@ -119,7 +114,7 @@ body {
   left: 344px;
   display: inline-block;
   color: #fff;
-  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
 }
 .hero-text h1 {
   font-size: 50px;
@@ -363,7 +358,7 @@ body.popup-open {
 #id_swiper-wrapper{
   max-width: 500px;
   height: auto;
-  object-fit: cover;
+
 }
 
 #id_swiper-wrapper .swiper-slide img {
@@ -379,6 +374,13 @@ body.popup-open {
 }
 
 @media (max-width: 767px) {
+  
+  #id_swiper-wrapper .swiper-slide img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  
   body.lock {
     overflow: hidden;
     font-size: 15px;
@@ -485,7 +487,7 @@ body.popup-open {
   }
 
   .header-list li {
-    margin: 0px 0px 20px 0px;
+    margin: 0 0 20px 0;
   }
 
   .contact {

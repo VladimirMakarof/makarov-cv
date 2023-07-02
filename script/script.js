@@ -22,7 +22,7 @@ function toggleClass() {
 
 let List = document.querySelectorAll('.header-link')
 List.forEach(item => {
-    item.addEventListener('click', (e) => {
+    item.addEventListener('click', () => {
         burger.classList.remove('active');
         menu.classList.remove('active');
         body.classList.remove('lock');
