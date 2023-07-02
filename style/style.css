@@ -79,7 +79,7 @@ body {
 }
 .header-bg {
   height: 500px;
-  background-image: url(https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1504&q=80);
+  background-image: url(../img/main_background.jpg);
   background-position: center;
   background-size: cover;
   position: relative;
@@ -359,6 +359,19 @@ body.popup-open {
 .popup-trigger:hover {
   color: red;
 }
+
+#id_swiper-wrapper{
+  max-width: 500px;
+  height: auto;
+  object-fit: cover;
+}
+
+#id_swiper-wrapper .swiper-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 @media (min-width: 780px) {
   .accordion-content {
     padding-left: 150px;

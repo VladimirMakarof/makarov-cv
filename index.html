@@ -8,6 +8,10 @@
   <title>Makarov Vladimir</title>
   <link rel="shortcut icon" href="logo/icons8-cv-16.png" type="image/x-icon">
   <link rel="stylesheet" href="style/style.css">
+  <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+  />
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/shades-of-purple.min.css">
   <script
@@ -60,7 +64,7 @@
         <div class="my-info">
           <div class="hero">
 
-            <img class="my-photo" src="img/1-208.jpg" alt="my photo">
+            <img class="my-photo" src="img/my_photo.jpg" alt="my photo">
             <div class="hero-text">
               <h1 data-i18="hero-title">Vladimir Makarov</h1>
               <p>Junior Frontend Developer</p>
@@ -122,7 +126,7 @@
       </section>
 
       <section id="objective" class="section accordion-item">
-        <h2 class="accordion-header" data-i18="purposes">Objective
+        <h2 class="accordion-header" data-i18="purposes">Purposes
           <span class="accordion-arrow">
             <svg width="30" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 10">
               <path fill="#000000" d="M0,0L7.5,5L0,10L1.25,5L0,0Z" />
@@ -131,14 +135,7 @@
           </span>
 
         </h2>
-        <p class="accordion-content">I am seeking a challenging and rewarding position as a
-          Full-stack Developer where I can
-          apply
-          my skills, passion, and drive to contribute to the success of a dynamic team. With a
-          strong
-          foundation in web development and a dedication to continuous learning, I am motivated to
-          deliver
-          high-quality solutions and excel in a professional environment.</p>
+        <p class="accordion-content" data-i18="purposes-text">I strive for creative, demanded and profitable work. The work of a programmer meets all these goals. Faced with various kinds of tasks and find elegant solutions for them, allows you to assert yourself, and financial independence is a huge plus.</p>
       </section>
 
       <section id="motivation" class="section about-me accordion-item highlight-section">
@@ -259,7 +256,7 @@
           <div id="education">
             <h2 data-i18="education">Education</h2>
             <ul>
-              <li>ITMO University (St. Petersburg, Russia)</li>
+              <li class="popup-trigger" data-popup-id="itmo-course">ITMO University (St. Petersburg, Russia)</li>
               <li class="popup-trigger" data-popup-id="js-course-popup">JavaScript2.0 - курс ItGid</li>
               <li class="popup-trigger" data-popup-id="php-course-popup">PHP - stage 2 - курс ItGid</li>
               <li class="popup-trigger" data-popup-id="js-function-course-popup">JavaScript Function - курс ItGid</li>
@@ -284,6 +281,30 @@
               <img src="../makarov-cv/img/diploma/php2.png" alt="PHP - stage 2 - курс ItGid">
               <span class="close-popup" data-popup-id="php-course-popup">Закрыть</span>
             </div>
+
+            <div class="popup" id="itmo-course">
+              <div class="swiper">
+                <div class="swiper-wrapper" id="id_swiper-wrapper">
+                  <div  class="swiper-slide">
+                    <img src="../makarov-cv/img/diploma/itmo-1.jpg" alt="ITMO-course - курс веб разработки">
+                  </div>
+                  <div  class="swiper-slide">
+                    <img src="../makarov-cv/img/diploma/itmo-2.jpg" alt="ITMO-course - курс веб разработки">
+                  </div>
+                  <div  class="swiper-slide">
+                    <img src="../makarov-cv/img/diploma/itmo-3.jpg" alt="ITMO-course - курс веб разработки">
+                  </div>
+                  <div  class="swiper-slide">
+                    <img src="../makarov-cv/img/diploma/itmo-4.jpg" alt="ITMO-course - курс веб разработки">
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+              <span class="close-popup" data-popup-id="itmo-course">Закрыть</span>
+            </div>
+
 
 
             <div class="overlay"></div>
@@ -409,7 +430,9 @@
       <p>Made by Makarov Vladimir © 2023</p>
     </footer>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="script/script.js"></script>
+
 </body>
 
 </html>
