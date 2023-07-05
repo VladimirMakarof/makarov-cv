@@ -294,6 +294,7 @@ body {
 /* popup */
 
 .popup {
+  max-height: 93%;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -316,8 +317,9 @@ body {
 }
 
 .popup img {
-  max-width: 100%;
+ max-width: 100%;
   height: auto;
+  
 }
 
 .close-popup {
@@ -356,30 +358,25 @@ body.popup-open {
 }
 
 #id_swiper-wrapper{
-  max-width: 500px;
+  max-width: 400px;
   height: auto;
-
 }
 
 #id_swiper-wrapper .swiper-slide img {
-  width: 100%;
+ max-width: 100%;
   height: auto;
-  object-fit: cover;
+  
+ 
 }
 
 @media (min-width: 780px) {
   .accordion-content {
     padding-left: 150px;
   }
+ 
 }
 
 @media (max-width: 767px) {
-  
-  #id_swiper-wrapper .swiper-slide img {
-    max-width: 100%;
-    height: auto;
-  }
-  
   
   body.lock {
     overflow: hidden;
@@ -493,6 +490,10 @@ body.popup-open {
   .contact {
     padding-top: 70px;
   }
+  .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after,
+  .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{
+    display: none;
+  }
 }
 
 @media (max-width: 625px) {
@@ -520,5 +521,9 @@ body.popup-open {
   .my-photo {
     top: 180px;
     left: 20%;
+  }
+  #id_swiper-wrapper{
+    max-width: 300px;
+    height: auto;
   }
 }
