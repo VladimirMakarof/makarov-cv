@@ -155,14 +155,28 @@ const i18Obj = {
         'experience-projects': 'У меня есть несколько образовательных проектов. Вот некоторые из них.',
         'experience-text-commercial': 'У меня есть коммерческий проект.',
         'motivation-text': 'Моя мотивация исходит из искренней любви к программированию и сильного желания быть в курсе последних тенденций и технологий в индустрии. Я постоянно изучаю онлайн-ресурсы, занимаюсь самообучением и активно участвую в соответствующих онлайн-сообществах, чтобы расширять свои знания и навыки. Меня вдохновляет удовлетворение от решения сложных задач и возможность создания инновационных и эффективных решений.',
-        'hire_me-text1':'Наняв меня, вы получите преданным и гибким Full-stack разработчиком, который стремится достигать выдающихся результатов. Я быстро обучаюсь и преуспеваю в сложных средах, где могу постоянно улучшать свои навыки. У меня сильные навыки решения проблем, внимание к деталям и умение работать в команде, что способствует эффективной коммуникации. Моя страсть к веб-разработке и способность быстро усваивать новые концепции делают меня ценным ресурсом для любой разработческой команды.',
-        'hire_me-text2':'Хотя я не посещал специальных конференций или выставок, моя стремительность к обучению и постоянное следование последним тенденциям в индустрии гарантируют, что я всегда в курсе новейших технологий. Я готов применить свой опыт и энтузиазм, чтобы помочь вашей организации достичь своих целей в быстро развивающейся сфере веб-разработки.',
+        'hire_me-text1': 'Наняв меня, вы получите преданным и гибким Full-stack разработчиком, который стремится достигать выдающихся результатов. Я быстро обучаюсь и преуспеваю в сложных средах, где могу постоянно улучшать свои навыки. У меня сильные навыки решения проблем, внимание к деталям и умение работать в команде, что способствует эффективной коммуникации. Моя страсть к веб-разработке и способность быстро усваивать новые концепции делают меня ценным ресурсом для любой разработческой команды.',
+        'hire_me-text2': 'Хотя я не посещал специальных конференций или выставок, моя стремительность к обучению и постоянное следование последним тенденциям в индустрии гарантируют, что я всегда в курсе новейших технологий. Я готов применить свой опыт и энтузиазм, чтобы помочь вашей организации достичь своих целей в быстро развивающейся сфере веб-разработки.',
     }
 }
 
 const russian = document.querySelector('.ru');
 const english = document.querySelector('.en');
 const words = document.querySelectorAll('[data-i18]');
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Проверяем, было ли значение 'ru-lang' установлено
+    const selectedLanguage = localStorage.getItem('ru-lang');
+    if (selectedLanguage === null) {
+        // Если значение не было установлено, устанавливаем значение по умолчанию 
+        localStorage.setItem('ru-lang', 'false');
+    }
+
+    if (selectedLanguage === 'true') {
+        getTranslateRu();
+    }
+});
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -221,31 +235,44 @@ function downloadFile(event, fileName) {
 }
 
 
- let svg = document.querySelector('.svg-download-link');
+let svg = document.querySelector('.svg-download-link');
 
 // Здесь обработчики событий на ссылку и элемент SVG
 
+console.log("Before SVG click event listener");
 
- svg.addEventListener('click', function (event) {
- let currentLanguage =  window.localStorage.getItem('ru-lang');
- if (currentLanguage === 'false') {
+const encodedEnglishFileName = encodeURIComponent('makarov_vladimir.pdf');
+const encodedRussianFileName = encodeURIComponent('макаров_владимир.pdf');
 
-      downloadFile(event, '../makarov_vladimir.pdf');
-  } else if (currentLanguage === 'true') {
-       downloadFile(event, '../макаров_владимир.pdf');
-   } else {
-       alert('Выбранный язык не поддерживается.');
+svg.addEventListener('click', function (event) {
+    console.log("SVG click event fired");
+    let currentLanguage = window.localStorage.getItem('ru-lang');
+    console.log("Current language:", currentLanguage);
+
+    if (currentLanguage === null) {
+        console.log('Language not set');
+        alert('Выберите язык перед загрузкой файла.');
+    } else if (currentLanguage === 'false') {
+        console.log("Downloading English file");
+        downloadFile(event, decodeURIComponent(encodedEnglishFileName));
+    } else if (currentLanguage === 'true') {
+        console.log("Downloading Russian file");
+        downloadFile(event, decodeURIComponent(encodedRussianFileName));
+    } else {
+        console.log('Unsupported language');
+        alert('Выбранный язык не поддерживается.');
     }
 });
 
 
 
 document.addEventListener('DOMContentLoaded', () => {
+    console.log("DOMContentLoaded event (2) fired");
     const selectedLanguage = localStorage.getItem('ru-lang');
     if (selectedLanguage === 'true') {
-        console.log("русский");
+        console.log("Language: русский");
     } else {
-        console.log("не русский");
+        console.log("Language: english");
     }
 });
 
@@ -268,7 +295,7 @@ updateTooltipText();
 
 // popup
 
-<!-- Кнопка для открытия popup -->
+
 const popupTriggers = document.querySelectorAll('.popup-trigger');
 const popups = document.querySelectorAll('.popup');
 const closeButtons = document.querySelectorAll('.close-popup');
@@ -301,7 +328,7 @@ function openPopup(popup, overlay) {
     document.body.classList.add('popup-open');
 
     popup.style.opacity = '0';
-    setTimeout(function() {
+    setTimeout(function () {
         popup.style.opacity = '1';
     }, 200);
 }
@@ -323,7 +350,7 @@ function closeAllPopups(overlay) {
 
 
 // Инициализация Swiper
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 
     const swiper = new Swiper('.swiper', {
 
