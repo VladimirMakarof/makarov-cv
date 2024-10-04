@@ -112,6 +112,29 @@ const i18Obj = {
         'hire_me-text2': 'While I haven\'t attended specific conferences or exhibitions, my eagerness to learn and staying up-to-date with the latest industry trends ensure that I am always aware of the newest technologies. I am ready to apply my experience and enthusiasm to help your organization achieve its goals in the rapidly evolving field of web development.',
 
 
+
+// Experience translations
+        'experience-text-commercial': 'I have a commercial project where I was responsible for developing and maintaining web resources for the Makarov Gallery, dedicated to the artist Nikolai Makarov.',
+        'experience-projects': 'I have several educational projects that I participated in to expand my professional skills. Here are some of them:',
+        'its-agency-title': 'its.agency - Web Project Manager',
+        'its-agency-description': 'Responsibilities included:',
+        'its-agency-tasks': [
+            'Coordinated web projects from the development stage to final implementation.',
+            'Interacted with clients to gather and clarify requirements.',
+            'Assigned tasks to development and design teams, and monitored progress through task trackers.',
+            'Ensured consistent and timely project delivery.'
+        ],
+        'digimatix-title': 'DIGIMATIX - Web Developer',
+        'digimatix-description': 'Responsibilities included:',
+        'digimatix-tasks': [
+            'Developed and maintained web projects on the CMS Bitrix platform.',
+            'Optimized templates, modules, and components for better functionality and user experience.',
+            'Coordinated work with designers and marketers to meet project timelines.',
+            'Integrated external services via APIs.',
+            'Conducted performance audits and automated server processes.'
+        ],
+
+
     },
     'ru': {
         'skills': 'Навыки',
@@ -158,16 +181,27 @@ const i18Obj = {
         'hire_me-text1': 'Наняв меня, вы получите преданным и гибким Full-stack разработчиком, который стремится достигать выдающихся результатов. Я быстро обучаюсь и преуспеваю в сложных средах, где могу постоянно улучшать свои навыки. У меня сильные навыки решения проблем, внимание к деталям и умение работать в команде, что способствует эффективной коммуникации. Моя страсть к веб-разработке и способность быстро усваивать новые концепции делают меня ценным ресурсом для любой разработческой команды.',
         'hire_me-text2': 'Хотя я не посещал специальных конференций или выставок, моя стремительность к обучению и постоянное следование последним тенденциям в индустрии гарантируют, что я всегда в курсе новейших технологий. Я готов применить свой опыт и энтузиазм, чтобы помочь вашей организации достичь своих целей в быстро развивающейся сфере веб-разработки.',
     
-    
-    // Ключи для опыта работы
-
-        'experience-text-commercial': 'I have a commercial project where I was responsible for developing and maintaining web resources for the Makarov Gallery, dedicated to the artist Nikolai Makarov.',
-        'experience-projects': 'I have several educational projects that I participated in to expand my professional skills. Here are some of them.',
-        'its-agency-title': 'its.agency - Web Project Manager',
-        'its-agency-description': 'Coordinated web projects from the development stage to final implementation, interacted with clients to gather and clarify requirements, set tasks for development and design teams, and monitored task completion through task trackers to ensure consistent and timely project delivery.',
-        'digimatix-title': 'DIGIMATIX - Web Developer',
-        'digimatix-description': 'Developed and maintained web projects on the CMS Bitrix platform, optimized templates, modules, and components to improve functionality and user experience, coordinated work with designers and marketers to meet project timelines, integrated external services via APIs, conducted performance audits, and automated server processes for increased efficiency.',
-    
+     // Experience translations
+        'experience-text-commercial': 'У меня есть коммерческий проект, в рамках которого я занимался разработкой и поддержкой веб-ресурсов для галереи Makarov Gallery, посвященной художнику Николаю Макарову.',
+        'experience-projects': 'У меня есть несколько образовательных проектов, в которых я участвовал для расширения своих профессиональных навыков. Вот некоторые из них:',
+        'its-agency-title': 'its.agency - Менеджер веб-проектов',
+        'its-agency-description': 'В обязанности входило:',
+        'its-agency-tasks': [
+            'Координация веб-проектов от этапа разработки до финального внедрения.',
+            'Взаимодействие с клиентами для сбора и уточнения требований.',
+            'Постановка задач для команд разработки и дизайна, а также мониторинг их выполнения через таск-трекеры.',
+            'Обеспечение согласованного и своевременного завершения проекта.'
+        ],
+        'digimatix-title': 'DIGIMATIX - Веб-разработчик',
+        'digimatix-description': 'В обязанности входило:',
+        'digimatix-tasks': [
+            'Разработка и поддержка веб-проектов на платформе CMS Bitrix.',
+            'Оптимизация шаблонов, модулей и компонентов для улучшения функциональности и пользовательского опыта.',
+            'Координация работы с дизайнерами и маркетологами для соблюдения сроков проекта.',
+            'Интеграция внешних сервисов с помощью API.',
+            'Проведение аудита производительности и автоматизация серверных процессов.'
+        ],
+   
     }
 }
 
