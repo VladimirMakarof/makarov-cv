@@ -160,13 +160,13 @@ const i18Obj = {
     
     
     // Ключи для опыта работы
-'experience-text-commercial': 'У меня есть коммерческий проект, в рамках которого я занимался разработкой и поддержкой веб-ресурсов для галереи Makarov Gallery, посвященной художнику Николаю Макарову.',
-'experience-projects': 'У меня есть несколько образовательных проектов, в которых я участвовал для расширения своих профессиональных навыков. Вот некоторые из них.',
-'its-agency-title': 'its.agency - Менеджер веб-проектов',
-'its-agency-description': 'Координировал веб-проекты от этапа разработки до финального внедрения, взаимодействовал с клиентами для сбора и уточнения требований, ставил задачи для команд разработки и дизайна, а также контролировал выполнение задач через таск-трекеры, чтобы обеспечить согласованное и своевременное завершение проекта.',
-'digimatix-title': 'DIGIMATIX - Веб-разработчик',
-'digimatix-description': 'Разрабатывал и поддерживал веб-проекты на платформе CMS Bitrix, оптимизировал шаблоны, модули и компоненты для улучшения функциональности и пользовательского опыта, координировал работу с дизайнерами и маркетологами для соблюдения сроков проекта, интегрировал внешние сервисы с помощью API, проводил аудит производительности и автоматизировал серверные процессы для повышения эффективности.'
 
+        'experience-text-commercial': 'I have a commercial project where I was responsible for developing and maintaining web resources for the Makarov Gallery, dedicated to the artist Nikolai Makarov.',
+        'experience-projects': 'I have several educational projects that I participated in to expand my professional skills. Here are some of them.',
+        'its-agency-title': 'its.agency - Web Project Manager',
+        'its-agency-description': 'Coordinated web projects from the development stage to final implementation, interacted with clients to gather and clarify requirements, set tasks for development and design teams, and monitored task completion through task trackers to ensure consistent and timely project delivery.',
+        'digimatix-title': 'DIGIMATIX - Web Developer',
+        'digimatix-description': 'Developed and maintained web projects on the CMS Bitrix platform, optimized templates, modules, and components to improve functionality and user experience, coordinated work with designers and marketers to meet project timelines, integrated external services via APIs, conducted performance audits, and automated server processes for increased efficiency.',
     
     }
 }
