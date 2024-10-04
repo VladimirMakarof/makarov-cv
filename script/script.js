@@ -209,6 +209,7 @@ const russian = document.querySelector('.ru');
 const english = document.querySelector('.en');
 const words = document.querySelectorAll('[data-i18]');
 
+
 document.addEventListener("DOMContentLoaded", () => {
     // Проверяем, было ли значение 'ru-lang' установлено
     const selectedLanguage = localStorage.getItem('ru-lang');
@@ -219,15 +220,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (selectedLanguage === 'true') {
         getTranslateRu();
-    } else {
-        getTranslateEn();
+    }
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    if (localStorage.getItem('ru-lang') === 'true') {
+        getTranslateRu();
     }
 });
 
 function getTranslateRu() {
     english.classList.remove('item__active');
     russian.classList.add('item__active');
-    setTranslation('ru');
+    words.forEach(el => {
+        const text = i18Obj.ru[el.dataset.i18];
+        if (el.placeholder) {
+            el.placeholder = text;
+        }
+        el.firstChild.data = text;
+    });
     window.localStorage.setItem('ru-lang', true);
     updateTooltipText();
 }
@@ -235,34 +247,22 @@ function getTranslateRu() {
 function getTranslateEn() {
     russian.classList.remove('item__active');
     english.classList.add('item__active');
-    setTranslation('en');
+    words.forEach(el => {
+        const text = i18Obj.en[el.dataset.i18];
+        if (el.placeholder) {
+            el.placeholder = text;
+        }
+        el.firstChild.data = text;
+    });
     window.localStorage.setItem('ru-lang', false);
     updateTooltipText();
-}
-
-// Функция для установки перевода
-function setTranslation(language) {
-    words.forEach(el => {
-        const key = el.dataset.i18;
-        const translation = i18Obj[language][key];
-
-        if (Array.isArray(translation)) {
-            // Если перевод является массивом, создаем список <li>
-            el.innerHTML = translation.map(item => `<li>${item}</li>`).join('');
-        } else if (el.placeholder) {
-            // Если это placeholder, изменяем его
-            el.placeholder = translation;
-        } else {
-            // Если перевод - обычный текст
-            el.textContent = translation;
-        }
-    });
 }
 
 russian.addEventListener('click', getTranslateRu);
 english.addEventListener('click', getTranslateEn);
 
 // Получение текущего языка страницы
+// let currentLanguage = document.documentElement.lang;
 let currentLanguage = window.localStorage.getItem('ru-lang') === 'true' ? 'ru' : 'en';
 
 // Функция для скачивания файла в зависимости от выбранного языка
