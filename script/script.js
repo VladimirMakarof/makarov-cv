@@ -65,7 +65,6 @@ accordionItems.forEach(item => {
 
 
 
-
 const i18Obj = {
     'en': {
         'skills': 'Skills',
@@ -111,29 +110,7 @@ const i18Obj = {
         'motivation-text': 'My motivation stems from a genuine love for programming and a strong desire to stay up-to-date with the latest industry trends and technologies. I am constantly exploring online resources, engaging in self-study, and participating in relevant online communities to expand my knowledge and skills. I am driven by the satisfaction of solving complex problems and the opportunity to create innovative and efficient solutions.',
         'hire_me-text1': 'By hiring me, you will get a dedicated and adaptable Full-stack Developer who strives to achieve outstanding results. I am a quick learner and excel in challenging environments where I can constantly improve my skills. I possess strong problem-solving abilities, attention to detail, and the ability to work collaboratively, which facilitates effective communication. My passion for web development and the ability to grasp new concepts quickly make me a valuable asset to any development team.',
         'hire_me-text2': 'While I haven\'t attended specific conferences or exhibitions, my eagerness to learn and staying up-to-date with the latest industry trends ensure that I am always aware of the newest technologies. I am ready to apply my experience and enthusiasm to help your organization achieve its goals in the rapidly evolving field of web development.',
-'job1-title': 'Web Project Manager at its.agency',
-    'job1-duration': 'August 2024 — Present (3 months)',
-    'job1-location': 'Saint Petersburg, its.agency',
-    'job1-description': `Managing and coordinating web projects from development to final implementation.
-Interacting with clients to gather and clarify requirements, without participating in sales.
-Collecting and processing project data, monitoring the completeness and correctness of task descriptions.
-Assigning tasks to development and design teams and controlling their execution through task trackers.
-Monitoring the consistency of development, testing, and implementation stages.
-Managing task deadlines and agreeing on project changes.
-Interacting with teams to ensure coordinated work at all stages of development.
-Resolving organizational issues related to project support and updates.
-Maintaining internal documentation and project reporting.`,
 
-    'job2-title': 'Web Developer at DIGIMATIX',
-    'job2-duration': 'November 2023 — July 2024 (9 months)',
-    'job2-location': 'Saint Petersburg, www.digimatix.ru',
-    'job2-description': `Development and support of web projects: Participated in the creation and maintenance of websites on Bitrix CMS, including setup and optimization of templates, modules, and components to improve functionality and user experience.
-Task management and team interaction: Coordinated work with designers and marketers for successful implementation of web projects, adhering to deadlines and requirements. Aligned tasks among project participants to achieve goals.
-Integration of external services: Developed solutions for integration with APIs and external systems, ensuring seamless operation of web projects and enhancing their functionality.
-Performance optimization: Conducted site audits and implemented measures to improve performance, including speeding up page loading and enhancing security.
-Process automation: Created and implemented scripts for automating server processes such as content updates, backups, and monitoring, reducing time spent on routine tasks.
-Deadline and priority control: Monitored task completion in projects, ensuring deadlines are met and priority tasks are executed sequentially.`,
-   
 
     },
     'ru': {
@@ -180,31 +157,6 @@ Deadline and priority control: Monitored task completion in projects, ensuring d
         'motivation-text': 'Моя мотивация исходит из искренней любви к программированию и сильного желания быть в курсе последних тенденций и технологий в индустрии. Я постоянно изучаю онлайн-ресурсы, занимаюсь самообучением и активно участвую в соответствующих онлайн-сообществах, чтобы расширять свои знания и навыки. Меня вдохновляет удовлетворение от решения сложных задач и возможность создания инновационных и эффективных решений.',
         'hire_me-text1': 'Наняв меня, вы получите преданным и гибким Full-stack разработчиком, который стремится достигать выдающихся результатов. Я быстро обучаюсь и преуспеваю в сложных средах, где могу постоянно улучшать свои навыки. У меня сильные навыки решения проблем, внимание к деталям и умение работать в команде, что способствует эффективной коммуникации. Моя страсть к веб-разработке и способность быстро усваивать новые концепции делают меня ценным ресурсом для любой разработческой команды.',
         'hire_me-text2': 'Хотя я не посещал специальных конференций или выставок, моя стремительность к обучению и постоянное следование последним тенденциям в индустрии гарантируют, что я всегда в курсе новейших технологий. Я готов применить свой опыт и энтузиазм, чтобы помочь вашей организации достичь своих целей в быстро развивающейся сфере веб-разработки.',
-   'job1-title': 'Менеджер веб-проектов в its.agency',
-    'job1-duration': 'Август 2024 — по настоящее время (3 месяца)',
-    'job1-location': 'Санкт-Петербург, its.agency',
-    'job1-description': `Ведение и координация веб-проектов от этапа разработки до финального внедрения.
-Взаимодействие с клиентами для сбора и уточнения требований, без участия в продажах.
-Сбор и обработка данных по проектам, контроль за полнотой и корректностью описания задач.
-Постановка задач командам разработки и дизайна, а также контроль их выполнения через таск-трекеры.
-Контроль за согласованностью этапов разработки, тестирования и внедрения решений.
-Управление сроками выполнения задач и согласование изменений в проекте.
-Взаимодействие с командами для обеспечения согласованной работы на всех этапах разработки.
-Решение организационных вопросов, связанных с поддержкой проектов и их обновлением.
-Поддержание внутренней документации и отчетности по проектам.`,
-
-    'job2-title': 'Веб-разработчик в DIGIMATIX',
-    'job2-duration': 'Ноябрь 2023 — Июль 2024 (9 месяцев)',
-    'job2-location': 'Санкт-Петербург, www.digimatix.ru',
-    'job2-description': `Разработка и поддержка веб-проектов: Участвовал в создании и поддержке сайтов на CMS Битрикс, включая настройку и оптимизацию шаблонов, модулей и компонентов для улучшения функциональности и пользовательского опыта.
-Управление задачами и взаимодействие с командой: Координировал работу с дизайнерами и маркетологами для успешной реализации веб-проектов, соблюдая сроки и требования. Согласовывал задачи между участниками проекта для достижения целей.
-Интеграция внешних сервисов: Разрабатывал решения для интеграции с API и внешними системами, обеспечивая бесшовную работу веб-проектов и улучшение их функциональных возможностей.
-Оптимизация производительности: Проводил аудит сайтов и внедрял меры по повышению производительности, включая ускорение загрузки страниц и улучшение безопасности.
-Автоматизация процессов: Создавал и внедрял скрипты для автоматизации серверных процессов, таких как обновление контента, резервное копирование и мониторинг, что сократило время на выполнение рутинных задач.
-Контроль сроков и приоритетов: Вёл мониторинг выполнения задач по проектам, обеспечивая соблюдение сроков и последовательное выполнение приоритетных задач.`,
-    
-    
-    
     }
 }
 
@@ -214,15 +166,15 @@ const words = document.querySelectorAll('[data-i18]');
 
 
 document.addEventListener("DOMContentLoaded", () => {
+    // Проверяем, было ли значение 'ru-lang' установлено
     const selectedLanguage = localStorage.getItem('ru-lang');
     if (selectedLanguage === null) {
+        // Если значение не было установлено, устанавливаем значение по умолчанию 
         localStorage.setItem('ru-lang', 'false');
     }
 
     if (selectedLanguage === 'true') {
         getTranslateRu();
-    } else {
-        getTranslateEn(); // Ensure the page is translated on load
     }
 });
 
@@ -240,9 +192,8 @@ function getTranslateRu() {
         const text = i18Obj.ru[el.dataset.i18];
         if (el.placeholder) {
             el.placeholder = text;
-        } else {
-            el.textContent = text;
         }
+        el.firstChild.data = text;
     });
     window.localStorage.setItem('ru-lang', true);
     updateTooltipText();
@@ -255,9 +206,8 @@ function getTranslateEn() {
         const text = i18Obj.en[el.dataset.i18];
         if (el.placeholder) {
             el.placeholder = text;
-        } else {
-            el.textContent = text;
         }
+        el.firstChild.data = text;
     });
     window.localStorage.setItem('ru-lang', false);
     updateTooltipText();
