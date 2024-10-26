@@ -36,45 +36,45 @@ burger.addEventListener('click', toggleClass);
 const accordionItems = document.querySelectorAll('.accordion-item');
 
 accordionItems.forEach(item => {
-    const header = item.querySelector('.accordion-header');
-    const content = item.querySelector('.accordion-content');
+  const header = item.querySelector('.accordion-header');
+  const content = item.querySelector('.accordion-content');
+  const arrow = header.querySelector('.accordion-arrow');
 
-    header.addEventListener('click', () => {
-    // Проверяем, является ли текущий элемент активным
+  header.addEventListener('click', () => {
     const isActive = item.classList.contains('active');
 
     // Закрываем все активные элементы
     accordionItems.forEach(accItem => {
-    accItem.classList.remove('active');
+      accItem.classList.remove('active');
 
-    const accContent = accItem.querySelector('.accordion-content');
-    if (accContent) {
+      const accContent = accItem.querySelector('.accordion-content');
+      if (accContent) {
         accContent.style.display = 'none';
-    }
+      }
 
-    const accArrow = accItem.querySelector('.accordion-arrow');
-    if (accArrow) {
-        accArrow.style.transform = 'none'; // Сбрасываем поворот стрелки
-    }
-});
-
+      const accArrow = accItem.querySelector('.accordion-arrow');
+      if (accArrow) {
+        accArrow.classList.remove('rotate-90');
+        accArrow.classList.add('rotate-0');
+      }
+    });
 
     // Если элемент не активный, открываем его
     if (!isActive) {
-        item.classList.add('active');
+      item.classList.add('active');
 
-        if (content) {
-            content.style.display = 'block';
-        }
+      if (content) {
+        content.style.display = 'block';
+      }
 
-        const arrow = item.querySelector('.accordion-arrow');
-        if (arrow) {
-            arrow.style.transform = 'rotate(90deg)'; // Поворачиваем стрелку
-        }
+      if (arrow) {
+        arrow.classList.remove('rotate-0');
+        arrow.classList.add('rotate-90');
+      }
     }
+  });
 });
 
-});
 
 
 
