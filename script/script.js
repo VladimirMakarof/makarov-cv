@@ -75,6 +75,20 @@ accordionItems.forEach(item => {
   });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    accordionItems.forEach(item => {
+        const header = item.querySelector('.accordion-header');
+        const arrow = header.querySelector('.accordion-arrow');
+        // Проверка: если блок активен, выставляем rotate-90 для стрелки
+        if (item.classList.contains('active')) {
+            arrow.classList.add('rotate-90');
+            arrow.classList.remove('rotate-0');
+        } else {
+            arrow.classList.add('rotate-0');
+            arrow.classList.remove('rotate-90');
+        }
+    });
+});
 
 
 
