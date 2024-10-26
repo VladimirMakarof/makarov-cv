@@ -213,15 +213,15 @@ const words = document.querySelectorAll('[data-i18]');
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Проверяем, было ли значение 'ru-lang' установлено
     const selectedLanguage = localStorage.getItem('ru-lang');
     if (selectedLanguage === null) {
-        // Если значение не было установлено, устанавливаем значение по умолчанию 
         localStorage.setItem('ru-lang', 'false');
     }
 
     if (selectedLanguage === 'true') {
         getTranslateRu();
+    } else {
+        getTranslateEn(); // Ensure the page is translated on load
     }
 });
 
@@ -239,8 +239,9 @@ function getTranslateRu() {
         const text = i18Obj.ru[el.dataset.i18];
         if (el.placeholder) {
             el.placeholder = text;
+        } else {
+            el.textContent = text;
         }
-        el.firstChild.data = text;
     });
     window.localStorage.setItem('ru-lang', true);
     updateTooltipText();
@@ -253,8 +254,9 @@ function getTranslateEn() {
         const text = i18Obj.en[el.dataset.i18];
         if (el.placeholder) {
             el.placeholder = text;
+        } else {
+            el.textContent = text;
         }
-        el.firstChild.data = text;
     });
     window.localStorage.setItem('ru-lang', false);
     updateTooltipText();
