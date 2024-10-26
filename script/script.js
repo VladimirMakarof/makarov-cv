@@ -33,38 +33,29 @@ List.forEach(item => {
 burger.addEventListener('click', toggleClass);
 
 
-document.addEventListener("DOMContentLoaded", () => {
-    const accordionItems = document.querySelectorAll('.accordion-item');
-    accordionItems.forEach(item => {
-        const header = item.querySelector('.accordion-header');
-        const content = item.querySelector('.accordion-content');
-        const arrow = header.querySelector('.accordion-arrow');
+const accordionItems = document.querySelectorAll('.accordion-item');
 
-        header.addEventListener('click', () => {
-            const isActive = item.classList.contains('active');
+accordionItems.forEach(item => {
+    const header = item.querySelector('.accordion-header');
+    const content = item.querySelector('.accordion-content');
 
-            // Закрываем все активные элементы
-            accordionItems.forEach(accItem => {
-                accItem.classList.remove('active');
-                const accContent = accItem.querySelector('.accordion-content');
-                const accArrow = accItem.querySelector('.accordion-arrow');
-                if (accContent) {
-                    accContent.style.display = 'none';
-                }
-                if (accArrow) {
-                    accArrow.classList.add('rotate-0');
-                    accArrow.classList.remove('rotate-90');
-                }
-            });
+    header.addEventListener('click', () => {
+        // Проверяем, является ли текущий элемент активным
+        const isActive = item.classList.contains('active');
 
-            // Если элемент не активен, открываем его
-            if (!isActive) {
-                item.classList.add('active');
-                content.style.display = 'block';
-                arrow.classList.toggle('rotate-0', false);
-                arrow.classList.toggle('rotate-90', true);
-            }
+        // Закрываем все активные элементы
+        accordionItems.forEach(accItem => {
+            accItem.classList.remove('active');
+            accItem.querySelector('.accordion-content').style.display = 'none';
+            accItem.querySelector('.accordion-arrow').style.transform = 'none'; // Сбрасываем поворот стрелки
         });
+
+        // Если элемент не активный, открываем его
+        if (!isActive) {
+            item.classList.add('active');
+            content.style.display = 'block';
+            item.querySelector('.accordion-arrow').style.transform = 'rotate(90deg)'; // Поворачиваем стрелку
+        }
     });
 });
 
