@@ -33,62 +33,41 @@ List.forEach(item => {
 burger.addEventListener('click', toggleClass);
 
 
-const accordionItems = document.querySelectorAll('.accordion-item');
-
-accordionItems.forEach(item => {
-  const header = item.querySelector('.accordion-header');
-  const content = item.querySelector('.accordion-content');
-  const arrow = header.querySelector('.accordion-arrow');
-
-  header.addEventListener('click', () => {
-    const isActive = item.classList.contains('active');
-
-    // Закрываем все активные элементы
-    accordionItems.forEach(accItem => {
-      accItem.classList.remove('active');
-
-      const accContent = accItem.querySelector('.accordion-content');
-      if (accContent) {
-        accContent.style.display = 'none';
-      }
-
-      const accArrow = accItem.querySelector('.accordion-arrow');
-      if (accArrow) {
-        accArrow.classList.remove('rotate-90');
-        accArrow.classList.add('rotate-0');
-      }
-    });
-
-    // Если элемент не активный, открываем его
-    if (!isActive) {
-      item.classList.add('active');
-
-      if (content) {
-        content.style.display = 'block';
-      }
-
-      if (arrow) {
-        arrow.classList.remove('rotate-0');
-        arrow.classList.add('rotate-90');
-      }
-    }
-  });
-});
-
 document.addEventListener("DOMContentLoaded", () => {
+    const accordionItems = document.querySelectorAll('.accordion-item');
     accordionItems.forEach(item => {
         const header = item.querySelector('.accordion-header');
+        const content = item.querySelector('.accordion-content');
         const arrow = header.querySelector('.accordion-arrow');
-        // Проверка: если блок активен, выставляем rotate-90 для стрелки
-        if (item.classList.contains('active')) {
-            arrow.classList.add('rotate-90');
-            arrow.classList.remove('rotate-0');
-        } else {
-            arrow.classList.add('rotate-0');
-            arrow.classList.remove('rotate-90');
-        }
+
+        header.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+
+            // Закрываем все активные элементы
+            accordionItems.forEach(accItem => {
+                accItem.classList.remove('active');
+                const accContent = accItem.querySelector('.accordion-content');
+                const accArrow = accItem.querySelector('.accordion-arrow');
+                if (accContent) {
+                    accContent.style.display = 'none';
+                }
+                if (accArrow) {
+                    accArrow.classList.add('rotate-0');
+                    accArrow.classList.remove('rotate-90');
+                }
+            });
+
+            // Если элемент не активен, открываем его
+            if (!isActive) {
+                item.classList.add('active');
+                content.style.display = 'block';
+                arrow.classList.toggle('rotate-0', false);
+                arrow.classList.toggle('rotate-90', true);
+            }
+        });
     });
 });
+
 
 
 
