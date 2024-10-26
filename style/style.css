@@ -31,6 +31,20 @@ body {
   scroll-behavior: smooth;
 }
 
+.job-entry {
+  margin-bottom: 20px;
+}
+
+.job-entry h3 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.job-entry p {
+  margin-bottom: 5px;
+}
+
+
 .section p {
   width: 100%;
 }
