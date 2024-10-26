@@ -40,23 +40,40 @@ accordionItems.forEach(item => {
     const content = item.querySelector('.accordion-content');
 
     header.addEventListener('click', () => {
-        // Проверяем, является ли текущий элемент активным
-        const isActive = item.classList.contains('active');
+    // Проверяем, является ли текущий элемент активным
+    const isActive = item.classList.contains('active');
 
-        // Закрываем все активные элементы
-        accordionItems.forEach(accItem => {
-            accItem.classList.remove('active');
-            accItem.querySelector('.accordion-content').style.display = 'none';
-            accItem.querySelector('.accordion-arrow').style.transform = 'none'; // Сбрасываем поворот стрелки
-        });
+    // Закрываем все активные элементы
+    accordionItems.forEach(accItem => {
+    accItem.classList.remove('active');
 
-        // Если элемент не активный, открываем его
-        if (!isActive) {
-            item.classList.add('active');
+    const accContent = accItem.querySelector('.accordion-content');
+    if (accContent) {
+        accContent.style.display = 'none';
+    }
+
+    const accArrow = accItem.querySelector('.accordion-arrow');
+    if (accArrow) {
+        accArrow.style.transform = 'none'; // Сбрасываем поворот стрелки
+    }
+});
+
+
+    // Если элемент не активный, открываем его
+    if (!isActive) {
+        item.classList.add('active');
+
+        if (content) {
             content.style.display = 'block';
-            item.querySelector('.accordion-arrow').style.transform = 'rotate(90deg)'; // Поворачиваем стрелку
         }
-    });
+
+        const arrow = item.querySelector('.accordion-arrow');
+        if (arrow) {
+            arrow.style.transform = 'rotate(90deg)'; // Поворачиваем стрелку
+        }
+    }
+});
+
 });
 
 
