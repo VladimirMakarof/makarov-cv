@@ -147,6 +147,19 @@ body {
   background-size: 32px 32px;
 }
 
+.job-entry {
+  margin-bottom: 20px;
+}
+
+.job-entry h3 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.job-entry p {
+  margin-bottom: 5px;
+}
+
 /*a, a:visited {
     color: #6782ff;
     text-decoration: none;
