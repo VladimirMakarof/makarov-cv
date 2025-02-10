@@ -131,6 +131,12 @@ const i18Obj = {
     Performance optimization: Conducted site audits and implemented measures to improve performance, including speeding up page loading and enhancing security.
     Process automation: Created and implemented scripts for automating server processes such as content updates, backups, and monitoring, reducing time spent on routine tasks.
     Deadline and priority control: Monitored task completion in projects, ensuring deadlines are met and priority tasks are executed sequentially.`,
+
+     'job3-title': 'Business Analyst / Developer / Content Manager at CDS Northern Capital',
+'job3-duration': '15 October — Present',
+'job3-location': 'CDS Northern Capital',
+'job3-description': 'At CDS Northern Capital, I seamlessly blend my expertise in business analysis, software development, and content management to drive digital transformation. I am responsible for optimizing business processes by integrating cutting-edge solutions such as the Pyrus API. My role involves strategic analysis, creative problem-solving, and proactive communication, ensuring that each project not only meets but exceeds expectations. I am dedicated to delivering high-quality results that empower the organization to achieve its long-term goals.',
+   
    
 
     },
@@ -201,6 +207,12 @@ const i18Obj = {
 Оптимизация производительности: Проводил аудит сайтов и внедрял меры по повышению производительности, включая ускорение загрузки страниц и улучшение безопасности.
 Автоматизация процессов: Создавал и внедрял скрипты для автоматизации серверных процессов, таких как обновление контента, резервное копирование и мониторинг, что сократило время на выполнение рутинных задач.
 Контроль сроков и приоритетов: Вёл мониторинг выполнения задач по проектам, обеспечивая соблюдение сроков и последовательное выполнение приоритетных задач.`,
+
+        'job3-title': 'Бизнес-аналитик / Разработчик / Контент-менеджер в ЦДС Северная Столица',
+'job3-duration': '15 октября — по настоящее время',
+'job3-location': 'ЦДС Северная Столица',
+'job3-description': 'В ЦДС Северная Столица я объединяю экспертизу в области бизнес-анализа, разработки и контент-менеджмента для содействия цифровой трансформации. Я отвечаю за оптимизацию бизнес-процессов путем интеграции передовых решений, таких как API Pyrus. Моя роль включает стратегический анализ, креативное решение проблем и активное взаимодействие с командой, что позволяет проектам не только соответствовать, но и превосходить ожидания. Я стремлюсь к высокому качеству результатов, способствующих достижению долгосрочных целей организации.',
+
    
     }
 }
