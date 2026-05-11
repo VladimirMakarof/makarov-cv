@@ -78,6 +78,7 @@ const i18Obj = {
     about_me_text:
       "I currently have experience working as a Web Developer, Web Project Manager, Business Analyst, and Content Manager. I've contributed to website creation and maintenance on the Bitrix CMS, handled integrations with external services, optimized performance, and coordinated project tasks with clients and teams. I completed a professional retraining program in Information Systems and Technologies at ITMO University and an ITMO professional development course in System Analysis. Now, I combine web development, project coordination, and analytical skills to build clearer requirements and more useful digital products.",
 
+    soft_skills: 'Soft Skills',
     tech_skills: 'Tech Skills',
     experience: 'Experience',
     education: 'Education',
@@ -253,47 +254,52 @@ const english = document.querySelector('.en');
 const words = document.querySelectorAll('[data-i18]');
 
 document.addEventListener('DOMContentLoaded', () => {
-  const selectedLanguage = localStorage.getItem('ru-lang');
+  const selectedLanguage = localStorage.getItem('ru-lang') === 'true' ? 'ru' : 'en';
+  setLanguage(selectedLanguage);
+});
 
-  if (selectedLanguage === null) {
-    localStorage.setItem('ru-lang', 'false');
-    updateTooltipText();
+function updateElementText(element, text) {
+  if (element.placeholder) {
+    element.placeholder = text;
+  }
+
+  const textNode = Array.from(element.childNodes).find((node) => node.nodeType === 3);
+
+  if (textNode) {
+    textNode.data = text;
     return;
   }
 
-  if (selectedLanguage === 'true') {
-    getTranslateRu();
-  } else {
-    updateTooltipText();
-  }
-});
+  element.textContent = text;
+}
 
-function getTranslateRu() {
-  english.classList.remove('item__active');
-  russian.classList.add('item__active');
-  words.forEach((el) => {
-    const text = i18Obj.ru[el.dataset.i18];
-    if (el.placeholder) {
-      el.placeholder = text;
+function setLanguage(language) {
+  const translations = i18Obj[language];
+
+  words.forEach((element) => {
+    const text = translations[element.dataset.i18];
+
+    if (typeof text !== 'string') {
+      return;
     }
-    el.firstChild.data = text;
+
+    updateElementText(element, text);
   });
-  window.localStorage.setItem('ru-lang', true);
+
+  const isRussian = language === 'ru';
+  russian.classList.toggle('item__active', isRussian);
+  english.classList.toggle('item__active', !isRussian);
+  document.documentElement.lang = language;
+  window.localStorage.setItem('ru-lang', String(isRussian));
   updateTooltipText();
 }
 
+function getTranslateRu() {
+  setLanguage('ru');
+}
+
 function getTranslateEn() {
-  russian.classList.remove('item__active');
-  english.classList.add('item__active');
-  words.forEach((el) => {
-    const text = i18Obj.en[el.dataset.i18];
-    if (el.placeholder) {
-      el.placeholder = text;
-    }
-    el.firstChild.data = text;
-  });
-  window.localStorage.setItem('ru-lang', false);
-  updateTooltipText();
+  setLanguage('en');
 }
 
 russian.addEventListener('click', getTranslateRu);
