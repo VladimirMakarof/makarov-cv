@@ -65,6 +65,7 @@ const i18Obj = {
     about_me: 'About Me',
     objective: 'About Me',
     'hero-title': 'Vladimir Makarov',
+    'hero-subtitle': 'Web Developer · Business Analyst · System Analyst',
     'phone-tooltip': 'Phone',
     'email-tooltip': 'Email',
     'skype-tooltip': 'Skype',
@@ -75,7 +76,7 @@ const i18Obj = {
     'sample_code-text':
       'Your coworker was supposed to write a simple helper function to capitalize a string (that contains a single word) before they went on vacation. Unfortunately, they have now left and the code they gave you doesn\'t work. Fix the helper function they wrote so that it works as intended (i.e. make the first character in the string "word" upper case). Don\'t worry about numbers, special characters, or non-string types being passed to the function. The string lengths will be from 1 character up to 10 characters, but will never be empty.',
     about_me_text:
-      "I currently have experience working both as a Web Developer and a Web Project Manager. I've contributed to website creation and maintenance on the Bitrix CMS, handling external service integrations and performance optimization. Additionally, I've coordinated project tasks and collaborated with clients and teams to ensure successful project execution. I completed a professional retraining program in Information Systems and Technologies at ITMO University and finished the initial stage of The Rolling Scopes School by Epam (stage 0). Now, I’m actively exploring various areas related to web development and trying myself in different fields. My goal is to become a skilled professional in web development and project management.",
+      "I currently have experience working as a Web Developer, Web Project Manager, Business Analyst, and Content Manager. I've contributed to website creation and maintenance on the Bitrix CMS, handled integrations with external services, optimized performance, and coordinated project tasks with clients and teams. I completed a professional retraining program in Information Systems and Technologies at ITMO University and an ITMO professional development course in System Analysis. Now, I combine web development, project coordination, and analytical skills to build clearer requirements and more useful digital products.",
 
     tech_skills: 'Tech Skills',
     experience: 'Experience',
@@ -142,7 +143,12 @@ const i18Obj = {
     'job3-duration': '15 October — Present',
     'job3-location': 'CDS Northern Capital',
     'job3-description':
-      'At CDS Northern Capital, I seamlessly blend my expertise in business analysis, software development, and content management to drive digital transformation. I am responsible for optimizing business processes by integrating cutting-edge solutions such as the Pyrus API. My role involves strategic analysis, creative problem-solving, and proactive communication, ensuring that each project not only meets but exceeds expectations. I am dedicated to delivering high-quality results that empower the organization to achieve its long-term goals.',
+      'At CDS Northern Capital, I combine business analysis, system analysis, software development, and content management to support digital transformation. I optimize business processes, clarify requirements, work with documentation, and integrate solutions such as the Pyrus API. My role requires structured analysis, communication with stakeholders, and practical implementation skills, helping projects move from business needs to reliable digital solutions.',
+    'system-analyst-course': 'ITMO University — System Analyst course (certificate pending)',
+    'system-analyst-popup-title': 'System Analyst course completed',
+    'system-analyst-popup-text':
+      'Placeholder for the ITMO professional development certificate. The program covered the analyst role in an IT team, artifacts prepared by an analyst, business analysis, system analysis, user stories and use cases, BPMN/UML diagrams, data models and API design.',
+    'system-analyst-popup-link': 'Course page',
   },
   ru: {
     skills: 'Навыки',
@@ -151,6 +157,7 @@ const i18Obj = {
     hire_me: 'Почему я подхожу',
     about_me: 'Обо мне',
     'hero-title': 'Владимир Макаров',
+    'hero-subtitle': 'Веб-разработчик · Бизнес-аналитик · Системный аналитик',
     'phone-tooltip': 'Телефон',
     'email-tooltip': 'Почта',
     'skype-tooltip': 'Скайп',
@@ -161,7 +168,7 @@ const i18Obj = {
     'sample_code-text':
       'Ваш коллега должен был написать простую вспомогательную функцию для преобразования строки (содержащей одно слово) в заглавные буквы перед отпуском. К сожалению, он уже ушел, и предоставленный им код не работает. Исправьте написанную им вспомогательную функцию так, чтобы она работала, как задумано (то есть сделайте первый символ строки "слово" заглавным). Не беспокойтесь о числах, специальных символах или передаче в функцию не-строковых типов данных. Длина строк будет от 1 символа до 10 символов, но никогда не будет пустой.',
     about_me_text:
-      'На данный момент у меня есть опыт работы как веб-разработчиком, так и менеджером веб-проектов. Я участвовал в создании и поддержке сайтов на CMS Битрикс, где занимался интеграцией внешних сервисов и оптимизацией производительности. Также координировал выполнение задач по веб-проектам и взаимодействовал с клиентами и командами для обеспечения качественного выполнения задач. Прошел профессиональную переподготовку в Университете ИТМО по специальности «Информационные системы и технологии» и завершил начальный этап The Rolling Scopes School от Epam (stage 0). Сейчас активно развиваюсь в разных областях, связанных с веб-разработкой, пробуя себя в новых направлениях. Моя цель — стать профессионалом в области веб-разработки и управления проектами. ',
+      'В настоящее время у меня есть опыт работы веб-разработчиком, менеджером веб-проектов, бизнес-аналитиком и контент-менеджером. Я участвовал в создании и поддержке сайтов на CMS Битрикс, занимался интеграцией внешних сервисов, оптимизацией производительности и координацией задач с клиентами и командами. Я завершил программу профессиональной переподготовки по направлению «Информационные системы и технологии» в Университете ИТМО, а также курс повышения квалификации ИТМО «Системный аналитик». Сейчас я объединяю навыки разработки, проектной координации и анализа требований, чтобы создавать более понятные и полезные цифровые продукты.',
 
     soft_skills: 'Софт Скиллс',
     tech_skills: 'Тех. навыки',
@@ -231,7 +238,13 @@ const i18Obj = {
     'job3-duration': '15 октября — по настоящее время',
     'job3-location': 'ЦДС Северная Столица',
     'job3-description':
-      'В ЦДС Северная Столица я объединяю экспертизу в области бизнес-анализа, разработки и контент-менеджмента для содействия цифровой трансформации. Я отвечаю за оптимизацию бизнес-процессов путем интеграции передовых решений, таких как API Pyrus. Моя роль включает стратегический анализ, креативное решение проблем и активное взаимодействие с командой, что позволяет проектам не только соответствовать, но и превосходить ожидания. Я стремлюсь к высокому качеству результатов, способствующих достижению долгосрочных целей организации.',
+      'В ЦДС Северная Столица я объединяю бизнес-анализ, системный анализ, разработку и контент-менеджмент для поддержки цифровой трансформации. Я оптимизирую бизнес-процессы, уточняю требования, работаю с документацией и интегрирую решения, включая API Pyrus. Моя роль требует структурного анализа, коммуникации со стейкхолдерами и практических навыков реализации, чтобы переводить бизнес-потребности в надежные цифровые решения.',
+    'system-analyst-course':
+      'Университет ИТМО — курс «Системный аналитик» (сертификат будет добавлен позже)',
+    'system-analyst-popup-title': 'Курс «Системный аналитик» завершён',
+    'system-analyst-popup-text':
+      'Заглушка для удостоверения о повышении квалификации ИТМО. Программа включала роль аналитика в IT-команде, артефакты аналитика, бизнес-анализ, системный анализ, user story и use case, диаграммы BPMN/UML, модели данных и проектирование API.',
+    'system-analyst-popup-link': 'Страница курса',
   },
 };
 
