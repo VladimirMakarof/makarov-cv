@@ -650,7 +650,6 @@ body {
 }
 
 .switch__lng {
-  z-index: 5;
   top: 92px;
   right: 40px;
   width: auto;
@@ -659,11 +658,6 @@ body {
   border: 1px solid rgb(255 255 255 / 28%);
   border-radius: 999px;
   backdrop-filter: blur(12px);
-}
-
-.switch__lng .lng__item:focus-visible {
-  outline: 2px solid #bfdbfe;
-  outline-offset: 2px;
 }
 
 .item__active {

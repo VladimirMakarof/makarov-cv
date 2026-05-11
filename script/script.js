@@ -18,7 +18,7 @@ function toggleClass() {
   }
 }
 
-const headerLinks = document.querySelectorAll('.header-menu .header-link');
+const headerLinks = document.querySelectorAll('.header-link');
 headerLinks.forEach((item) => {
   item.addEventListener('click', () => {
     burger.classList.remove('active');
@@ -263,12 +263,10 @@ function updateElementText(element, text) {
     element.placeholder = text;
   }
 
-  const textNodes = Array.from(element.childNodes).filter((node) => node.nodeType === 3);
-  const visibleTextNode = textNodes.find((node) => node.data.trim().length > 0);
-  const targetTextNode = visibleTextNode || textNodes[0];
+  const textNode = Array.from(element.childNodes).find((node) => node.nodeType === 3);
 
-  if (targetTextNode) {
-    targetTextNode.data = text;
+  if (textNode) {
+    textNode.data = text;
     return;
   }
 
@@ -306,20 +304,6 @@ function getTranslateEn() {
 
 russian.addEventListener('click', getTranslateRu);
 english.addEventListener('click', getTranslateEn);
-
-russian.addEventListener('keydown', (event) => {
-  if (event.key === 'Enter' || event.key === ' ') {
-    event.preventDefault();
-    getTranslateRu();
-  }
-});
-
-english.addEventListener('keydown', (event) => {
-  if (event.key === 'Enter' || event.key === ' ') {
-    event.preventDefault();
-    getTranslateEn();
-  }
-});
 
 function downloadFile(event, fileName) {
   event.preventDefault();
