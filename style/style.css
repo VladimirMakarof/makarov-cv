@@ -235,11 +235,6 @@ body {
   justify-content: space-between;
 }
 
-.skills div,
-.experience div {
-
-}
-
 .accordion-content {
   display: none;
 }
@@ -257,10 +252,9 @@ body {
   display: flex;
   align-items: center;
 }
-.accordion-arrow>svg{
+.accordion-arrow > svg {
   transform: translateY(-7px);
 }
-
 
 .accordion-arrow {
   width: 12px;
@@ -295,13 +289,25 @@ body {
 .svg-link:hover::after {
   opacity: 1;
 }
-.download_section{
+.download_section {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
 }
-.download_section>h2{
-  padding-left: 20px;
+
+.download-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #000;
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.download-icon {
+  width: 36px;
+  height: 36px;
 }
 
 /* popup */
@@ -317,7 +323,9 @@ body {
   padding: 20px;
   display: none;
   opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 .popup.open {
@@ -330,9 +338,8 @@ body {
 }
 
 .popup img {
- max-width: 100%;
+  max-width: 100%;
   height: auto;
-  
 }
 
 .close-popup {
@@ -353,7 +360,6 @@ body {
 }
 body.popup-open {
   overflow: hidden;
-  
 }
 
 .popup-trigger {
@@ -370,27 +376,23 @@ body.popup-open {
   color: red;
 }
 
-#id_swiper-wrapper{
+#id_swiper-wrapper {
   max-width: 400px;
   height: auto;
 }
 
 #id_swiper-wrapper .swiper-slide img {
- max-width: 100%;
+  max-width: 100%;
   height: auto;
-  
- 
 }
 
 @media (min-width: 780px) {
   .accordion-content {
     padding-left: 150px;
   }
- 
 }
 
 @media (max-width: 767px) {
-  
   body.lock {
     overflow: hidden;
     font-size: 15px;
@@ -443,7 +445,7 @@ body.popup-open {
 
   .header-burger:before,
   .header-burger:after {
-    content: "";
+    content: '';
     background-color: #000000;
     position: absolute;
     width: 100%;
@@ -503,8 +505,10 @@ body.popup-open {
   .contact {
     padding-top: 70px;
   }
-  .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after,
-  .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{
+  .swiper-button-prev:after,
+  .swiper-rtl .swiper-button-next:after,
+  .swiper-button-next:after,
+  .swiper-rtl .swiper-button-prev:after {
     display: none;
   }
 }
@@ -535,7 +539,7 @@ body.popup-open {
     top: 180px;
     left: 20%;
   }
-  #id_swiper-wrapper{
+  #id_swiper-wrapper {
     max-width: 300px;
     height: auto;
   }
