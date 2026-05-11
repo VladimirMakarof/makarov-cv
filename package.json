@@ -1,0 +1,21 @@
+{
+  "name": "makarov-cv",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static bilingual CV website for Vladimir Makarov.",
+  "scripts": {
+    "check": "npm run lint:js && npm run lint:css && npm run lint:html && npm run format:check",
+    "format": "prettier --write \"**/*.{html,css,js,json,md}\"",
+    "format:check": "prettier --check \"**/*.{html,css,js,json,md}\"",
+    "lint:css": "stylelint \"style/**/*.css\"",
+    "lint:html": "html-validate index.html",
+    "lint:js": "eslint script/**/*.js"
+  },
+  "devDependencies": {
+    "eslint": "^9.26.0",
+    "html-validate": "^9.7.1",
+    "prettier": "^3.5.3",
+    "stylelint": "^16.19.1",
+    "stylelint-config-standard": "^38.0.0"
+  }
+}
